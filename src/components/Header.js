@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types'
+import Button from './Button'
 
 const Header = (props) => {
   return (
-    <header>
+    <header className="header">
       <h1>{props.title}</h1>
+      <Button color="green" text="Add" />
     </header>
   )
 }
@@ -13,7 +15,13 @@ Header.defaultProps = {
 }
 
 Header.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
+}
+
+// CSS in js
+const styleHeader = {
+  color: '#555',
+  backgroundColor: '#eee'
 }
 
 export default Header
