@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
+import AddTask from './components/AddTask'
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
 
   return (
     <div className="container">
+      <AddTask />
       <Header title="Task tracker" />
       {
         tasks.length > 0 ? (
